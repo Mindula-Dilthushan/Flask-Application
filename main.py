@@ -20,9 +20,6 @@ def index():
     return "Hello Flask Application...!"
 
 
-print("App Scope --> ", app_scope)
-
-
 @app.route("/calc")
 def calc():
     number_one = request.args["number_01"]
@@ -50,6 +47,20 @@ def new_volume(base_area, height):
     volume_tot = int(base_area) * int(height)
     return f"{volume_tot}"
 
+
+# json type data ---------------------------------------------------
+@app.route("/json_calc/<number_one>/<number_two>")
+def new_json_calc(number_one, number_two):
+    result_calc = int(number_one)+int(number_two)
+
+    response_data = {
+        "result": result_calc
+    }
+    print(type(response_data))
+    return response_data
+
+
+print("App Scope --> ", app_scope)
 
 if __name__ == "__main__":
     app.run(debug=True)
