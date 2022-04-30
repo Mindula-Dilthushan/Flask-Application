@@ -3,7 +3,7 @@
 # WEB - Application
 # 22 - 04 -23
 
-from flask import Flask, request,render_template
+from flask import Flask, request, render_template
 
 app = Flask(__name__)
 
@@ -74,7 +74,7 @@ def view_index():
 
 @app.route("/view_index_template")
 def view_index_2():
-    return render_template("index.html")
+    return render_template('index.html')
 
 
 @app.route("/view_index_name")
@@ -93,6 +93,21 @@ def view_index_name_age():
     response_view = response_view.replace("{{name}}", name)
     response_view = response_view.replace("{{age}}", age)
     return response_view
+
+
+# set data
+@app.route("/set_data", methods=["GET", "POST"])
+def set_data():
+    name = "Empty"
+    age = "Empty"
+
+    if request.method == "POST":
+        if "name" in request.args:
+            name = request.args["name"]
+        if "age" in request.args:
+            age = request.args["age"]
+
+    return render_template('template/set_data.html', name=name, age=age)
 
 
 print("App Scope --> ", app_scope)
