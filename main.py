@@ -9,6 +9,7 @@ app = Flask(__name__)
 
 app_scope = "TEST APP Scope"
 
+
 @app.route("/")
 def index():
     # var = request.args["Test"]
@@ -18,20 +19,35 @@ def index():
     print("Hello Flask Application...!")
     return "Hello Flask Application...!"
 
+
 print("App Scope --> ", app_scope)
+
 
 @app.route("/calc")
 def calc():
     number_one = request.args["number_01"]
     number_two = request.args["number_02"]
-    result_calc = int(number_one)+int(number_two)
+    result_calc = int(number_one) + int(number_two)
     return f"{result_calc}"
+
+
+@app.route("/new_calc/<number_one>/<number_two>")
+def new_calc(number_one, number_two):
+    result_calc = int(number_one) + int(number_two)
+    return f"{result_calc}"
+
 
 @app.route("/volume")
 def volume():
     base_area = request.args["base_area"]
     height = request.args["height"]
-    volume_tot = int(base_area)*int(height)
+    volume_tot = int(base_area) * int(height)
+    return f"{volume_tot}"
+
+
+@app.route("/new_volume/<base_area>/<height>")
+def new_volume(base_area, height):
+    volume_tot = int(base_area) * int(height)
     return f"{volume_tot}"
 
 
