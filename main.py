@@ -107,7 +107,7 @@ def set_data():
         if "age" in request.args:
             age = request.args["age"]
 
-    return render_template('template/set_data.html', name=name, age=age)
+    return render_template('set_data.html', name=name, age=age)
 
 
 print("App Scope --> ", app_scope)
