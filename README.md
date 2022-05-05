@@ -15,6 +15,14 @@ git clone https://github.com/Mindula-Dilthushan/Flask-Application.git
 ### License 📝
 [![GitHub license](https://img.shields.io/github/license/Mindula-Dilthushan/Flask-Application?&labelColor=black&color=3867d6&style=for-the-badge)](https://github.com/Mindula-Dilthushan/Red-Alpha-Assistant-Bot/blob/master/LICENSE)
 
+
+
+### Runing the application locally 🚀
+
+
+
+
+
 <div align="center">
 
 ![repo size](https://img.shields.io/github/repo-size/Mindula-Dilthushan/Flask-Application?label=Repo%20Size&style=for-the-badge&labelColor=black&color=20bf6b)
