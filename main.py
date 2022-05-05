@@ -80,7 +80,7 @@ def view_index_2():
 @app.route("/view_index_name")
 def view_index_name():
     name = request.args["name"]
-    response_view = open("name.html").read()
+    response_view = open("templates/name.html").read()
     response_view = response_view.replace("{{name}}", name)
     return response_view
 
@@ -89,25 +89,34 @@ def view_index_name():
 def view_index_name_age():
     name = request.args["name"]
     age = request.args["age"]
-    response_view = open("name_age.html").read()
+    response_view = open("templates/name_age.html").read()
     response_view = response_view.replace("{{name}}", name)
     response_view = response_view.replace("{{age}}", age)
     return response_view
 
 
+@app.route("/view_idx_name_age_temp")
+def view_idx_name_age_temp():
+    name = request.args["name"]
+    age = request.args["age"]
+    return render_template("name_age.html", name=name, age=age)
+
+
+# line 88 and 98 wenasa wenne render template eka use karaddi html file eke {{ name }} space thibunata kamak na.render template eka nisa auto eka aragannawa.
+
 # set data
-@app.route("/set_data", methods=["GET", "POST"])
-def set_data():
+@app.route("/view_form", methods=["GET", "POST"])
+def view_form():
     name = "Empty"
     age = "Empty"
 
     if request.method == "POST":
-        if "name" in request.args:
-            name = request.args["name"]
-        if "age" in request.args:
-            age = request.args["age"]
+        if "name" in request.form:
+            name = request.form["name"]
+        if "age" in request.form:
+            age = request.form["age"]
 
-    return render_template('set_data.html', name=name, age=age)
+    return render_template("form.html", name=name, age=age)
 
 
 print("App Scope --> ", app_scope)

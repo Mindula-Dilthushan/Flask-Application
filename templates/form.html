@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Flask Application</title>
+</head>
+<body>
+
+<h1 align="center"> Set Form Data </h1>
+
+
+<div align="center">
+    <form method="post">
+
+        <label>
+            <input name="name" placeholder="enter your name"/>
+        </label>
+        <label>
+            <input name="age" placeholder="enter your age"/>
+        </label>
+
+        <h3 align="center">Your name is : {{ name }} </h3>
+        <h3 align="center">Your age is : {{ age }} </h3>
+
+        <button> save</button>
+    </form>
+</div>
+
+
+</body>
+</html>
