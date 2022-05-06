@@ -37,6 +37,28 @@ python main.py
 http://127.0.0.1:5000
 ```
 
+| Function                            | HTTP verb | URL                                                                              |
+|-------------------------------------|-----------|----------------------------------------------------------------------------------|
+| root                                | GET       | `http://127.0.0.1:5000`                                                          |
+| calc                                | GET       | `http://127.0.0.1:5000/calc?number_01={nmb1_value}&number_02={nmb2_value}`       |
+| new calc                            | GET       | `http://127.0.0.1:5000/new_calc/{nmb1_value}/{nmb2_value}`                       |
+| volume                              | GET       | `http://127.0.0.1:5000/volume?base_area={base_area_value}&height={height_value}` |
+| new volume                          | GET       | `http://127.0.0.1:5000/new_volume/{base_area_value}/{height_value}`              |
+| json calc                           | GET       | `http://127.0.0.1:5000/json_calc/{nmb1_value}/{nmb2_value}`                      |
+| view                                | GET       | `http://127.0.0.1:5000/view`                                                     |
+| view index                          | GET       | `http://127.0.0.1:5000/view_index`                                               |
+| view index using render temp        | GET       | `http://127.0.0.1:5000/view_index_template`                                      |
+| view name                           | GET       | `http://127.0.0.1:5000/view_index_name?name={name_value}`                        |
+| view name and age                   | GET       | `http://127.0.0.1:5000/view_index_name_age?name={name_value}&age={age_value}`    |
+| view name and age using render temp | GET       | `http://localhost:5000/view_idx_name_age_temp?name={name_value}&age={age_value}` |
+| view form                           | GET       | `http://localhost:5000/view_form?name={name_value}&age={age_value}`              |
+| view form                           | POST      | `http://localhost:5000/view_form`                                                |
+
+
+
+
+
+
 
 <div align="center">
 

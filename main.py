@@ -99,7 +99,7 @@ def view_index_name_age():
 def view_idx_name_age_temp():
     name = request.args["name"]
     age = request.args["age"]
-    return render_template("name_age.html", name=name, age=age)
+    return render_template("temp_name_age.html", name=name, age=age)
 
 
 # line 88 and 98 wenasa wenne render template eka use karaddi html file eke {{ name }} space thibunata kamak na.render template eka nisa auto eka aragannawa.
@@ -110,6 +110,14 @@ def view_form():
     name = "Empty"
     age = "Empty"
 
+    # get method -----------------------------
+    if request.method == "GET":
+        if "name" in request.args:
+            name = request.args["name"]
+        if "age" in request.args:
+            age = request.args["age"]
+
+    # post method -----------------------------
     if request.method == "POST":
         if "name" in request.form:
             name = request.form["name"]
