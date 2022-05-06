@@ -19,8 +19,23 @@ git clone https://github.com/Mindula-Dilthushan/Flask-Application.git
 
 ### Runing the application locally 🚀
 
+1. Install Flask
 
+```md
+pip install flask
+```
 
+2. Run
+
+```md
+python main.py
+```
+
+3. Runing on Localhost in port : 5000
+
+```md
+http://127.0.0.1:5000
+```
 
 
 <div align="center">
