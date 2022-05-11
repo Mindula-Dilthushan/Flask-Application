@@ -13,7 +13,7 @@ git clone https://github.com/Mindula-Dilthushan/Flask-Application.git
 ![GitHub Contributions](https://img.shields.io/github/contributors/Mindula-Dilthushan/Flask-Application?&labelColor=black&color=8854d0&style=for-the-badge)
 
 ### License 📝
-[![GitHub license](https://img.shields.io/github/license/Mindula-Dilthushan/Flask-Application?&labelColor=black&color=3867d6&style=for-the-badge)](https://github.com/Mindula-Dilthushan/Red-Alpha-Assistant-Bot/blob/master/LICENSE)
+[![GitHub license](https://img.shields.io/github/license/Mindula-Dilthushan/Flask-Application?&labelColor=black&color=3867d6&style=for-the-badge)](https://github.com/Mindula-Dilthushan/Flask-Application/blob/master/LICENSE)
 
 
 
